@@ -78,7 +78,7 @@ const Home = () => {
                 <motion.div
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
-                    className="opacity-0 container mx-auto max-w-4xl pt-44 md:pt-60"
+                    className="h-screen flex flex-col justify-center opacity-0 container mx-auto max-w-4xl"
                 >
                     <div className="text-center">
                         <div className="text-4xl text-white font-bold font-nunito md:flex justify-center">
@@ -135,7 +135,7 @@ const Home = () => {
                         visible: { x: 0, opacity: 1 }
                     }}
                     transition={{ duration: 1 }}
-                    className="container mx-auto pt-60"
+                    className="container mx-auto"
                 >
                     <p className="text-2xl font-bold text-white font-nunito uppercase title">Portofolio</p>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10">
