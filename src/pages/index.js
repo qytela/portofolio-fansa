@@ -25,7 +25,7 @@ const Home = () => {
         },
         {
             name: 'Komunkasi Langit',
-            description: 'Dengan menggunakan aplikasi ini anda dapat mendapatkan informasi agunan baik rumah, tanah dll yang status penjualannya di lelang, baik dari searching location maupun kategori.',
+            description: 'Media Pembahasan Kita oleh Para Asatdiz Aplikasi Belajar Sunnah Online adalah salah satu fitur e-learning yang disediakan oleh Media Komunikasi Langit yang dapat dipergunakan oleh Para Asatdiz untuk membahas Kitab berseri dalam kurun waktu tertentu (mingguan, bulanan, semesteran, dsb) tergantung dari periode pembahasan Kitab.',
             icon: '/komulang-icon.png',
             url: 'http://komunikasilangit.com'
         },
