@@ -1,3 +1,5 @@
+import 'aos/dist/aos.css'
+
 import React, { Fragment, memo, useEffect } from 'react'
 import AOS from 'aos'
 

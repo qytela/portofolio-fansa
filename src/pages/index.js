@@ -7,7 +7,7 @@ const Home = () => {
         AOS.init({
             once: true
         })
-    })
+    },[])
 
     const renderPortofolios = (
         Array.from(Array(4), (_, key) => (
