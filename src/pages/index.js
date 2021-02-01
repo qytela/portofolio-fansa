@@ -31,7 +31,7 @@ const Home = () => {
         },
         {
             name: 'KumpulModal',
-            description: 'Kumpulmodal adalah aplikasi penggalangan modal usaha bagi pedagang kaki lima, yang menghubungkan Anda sebagai Investor dengan mendanai usaha pedagang kaki lima di Indonesia. Dengan Kumpulmodal, Anda telah membuat dampak sosial dan mendapatkan penghasilan.',
+            description: 'Kumpulmodal adalah aplikasi penggalangan modal usaha bagi pedagang kaki lima, yang menghubungkan Anda sebagai Investor dengan mendanai usaha pedagang kaki lima di Indonesia.',
             icon: '/kumpulmodal-icon.png',
             url: 'https://play.google.com/store/apps/details?id=com.kumpulmodal'
         },
@@ -45,11 +45,15 @@ const Home = () => {
 
     const renderPortofolios = (
         portofolios.map((item, index) => (
-            <div key={index} className="bg-gray-800 rounded-lg p-4">
-                <img src={item.icon} width="60px" height="60px" />
-                <div className="mt-5">
-                    <p className="text-lg text-white font-bold font-nunito">{item.name}</p>
-                    <p className="text-md text-gray-200 font-semibold font-nunito">{item.description.length > 200 ? `${item.description.slice(0, 200)}...` : item.description}</p>
+            <div key={index} className="bg-gray-800 max-h-96 flex flex-col justify-between rounded-lg p-4">
+                <div>
+                    <img src={item.icon} width="60px" height="60px" />
+                    <div className="mt-5">
+                        <p className="text-lg text-white font-bold font-nunito">{item.name}</p>
+                        <p className="text-md text-gray-200 font-semibold font-nunito">{item.description.length > 150 ? `${item.description.slice(0, 150)}...` : item.description}</p>
+                    </div>
+                </div>
+                <div>
                     <motion.a
                         whileHover={{ scale: 1.1 }}
                         target="_blank"
