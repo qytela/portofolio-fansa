@@ -1,0 +1,32 @@
+.title:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+}
+.title:before {
+    margin-top: 30px;
+    width: 40px;
+    height: 5px;
+    background-color: #3f84e5;
+    border-radius: 10px;
+}
+.button {
+    background: #2395FF;
+    box-shadow: 0px 8px 10px rgba(35, 149, 255, 0.3);
+}
+.button-scale:hover {
+    transition-property: transform;
+    transition: transform 500ms;
+    transform: scale(1.1);
+}
+.button-scale:focus {
+    outline: none;
+}
+.icon:hover {
+    transition-property: transform;
+    transition: transform 500ms;
+    transform: rotate(360deg) scale(1.1);
+}
+.icon:focus {
+    outline: none;
+}

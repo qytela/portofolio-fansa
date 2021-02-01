@@ -4,8 +4,6 @@ import 'aos/dist/aos.css'
 import React, { Fragment, memo, useEffect } from 'react'
 import AOS from 'aos'
 
-import styles from '../components/Styles.module.css'
-
 const FirstPost = () => {
     useEffect(() => {
         AOS.init({
@@ -20,11 +18,11 @@ const FirstPost = () => {
                 <p className="text-lg font-semibold text-blue-500 font-poppins mt-2">Zwallet Web</p>
                 <p className="text-md text-black font-poppins">ZWallet adalah aplikasi yang bertujuan untuk mempermudah penyimpanan uang secara virtual, dibek...</p>
                 <div className="flex gap-3 mt-4">
-                    <button className={`flex gap-2 shadow-md rounded-xl px-4 py-2 bg-blue-500 items-center ${styles.button_scale}`}>
+                    <button className="flex gap-2 shadow-md rounded-xl px-4 py-2 bg-blue-500 items-center button-scale">
                         <img src="http://apiar.online/icons/search.svg" width="18px" height="18px" />
                         <p className="text-md text-white font-semibold font-poppins">View</p>
                     </button>
-                    <button className={`flex gap-2 shadow-md rounded-xl px-4 py-2 bg-gray-100 items-center ${styles.button_scale}`}>
+                    <button className="flex gap-2 shadow-md rounded-xl px-4 py-2 bg-gray-100 items-center button-scale">
                         <img src="http://apiar.online/icons/github.svg" width="18px" height="18px" />
                         <p className="text-md text-black font-semibold font-poppins">Github</p>
                     </button>
@@ -55,15 +53,15 @@ const FirstPost = () => {
                                 <p className="text-lg text-black font-poppins mt-5">Saya adalah seorang Fullstack Developer asal Jakarta yang memiliki pengalaman dari membuat aplikasi website maupun mobile. Saya juga menyukai hal baru dan mempelajarinya dengan cepat.</p>
                             </div>
                             <div className="container flex items-center gap-4 mt-5">
-                                <button className={`p-4 bg-blue-200 rounded-full ${styles.icon}`}>
+                                <button className="p-4 bg-blue-200 rounded-full icon">
                                     <img src="http://apiar.online/icons/call.svg" width="20px" height="20px" />
                                 </button>
-                                <button className={`p-4 bg-blue-200 rounded-full ${styles.icon}`}>
+                                <button className="p-4 bg-blue-200 rounded-full icon">
                                     <img src="http://apiar.online/icons/linkedin.svg" width="20px" height="20px" />
                                 </button>
                             </div>
                             <div className="w-56 mt-5">
-                                <button className={`shadow-md bg-blue-500 py-4 container rounded-3xl text-white font-bold font-poppins ${styles.button_scale}`}>Download CV</button>
+                                <button className="shadow-md bg-blue-500 py-4 container rounded-3xl text-white font-bold font-poppins button-scale">Download CV</button>
                             </div>
                         </div>
                         <div className="hidden lg:block">
@@ -73,7 +71,7 @@ const FirstPost = () => {
                 </div>
 
                 <div className="pt-44" data-aos="fade-left" data-aos-duration="800">
-                    <p className={`text-2xl font-bold text-black font-poppins uppercase ${styles.title}`}>Portofolio</p>
+                    <p className="text-2xl font-bold text-black font-poppins uppercase title">Portofolio</p>
                     <div className="mt-5">
                         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                             {renderPortofolio}
@@ -89,10 +87,10 @@ const FirstPost = () => {
                             <p className="text-2xl text-white font-bold font-poppins lg:text-3xl">Sedang mencari Pekerja atau Freelancer?</p>
                             <p className="text-md text-white font-poppins mt-8">Jika kamu tertarik ingin mempekerjakan atau bekerja sama dengan saya, kamu bisa menghubungi saya dibawah ini.</p>
                             <div className="flex items-center gap-4 mt-5">
-                                <button className={`p-4 bg-white rounded-full ${styles.icon}`}>
+                                <button className="p-4 bg-white rounded-full icon">
                                     <img src="http://apiar.online/icons/call.svg" width="20px" height="20px" />
                                 </button>
-                                <button className={`p-4 bg-white rounded-full ${styles.icon}`}>
+                                <button className="p-4 bg-white rounded-full icon">
                                     <img src="http://apiar.online/icons/linkedin.svg" width="20px" height="20px" />
                                 </button>
                             </div>
