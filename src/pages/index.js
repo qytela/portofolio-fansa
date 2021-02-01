@@ -1,14 +1,8 @@
-import React, { Fragment, memo, useEffect } from 'react'
+import React, { Fragment, memo } from 'react'
 import { FaGithub, FaDribbble, FaTwitter, FaRegEnvelope } from 'react-icons/fa'
-import AOS from 'aos'
+import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
 
 const Home = () => {
-    useEffect(() => {
-        AOS.init({
-            once: true
-        })
-    },[])
-
     const renderPortofolios = (
         Array.from(Array(4), (_, key) => (
             <div { ...{ key } } className="bg-gray-800 rounded-lg">
@@ -20,10 +14,13 @@ const Home = () => {
                 <div className="p-4">
                     <p className="text-lg text-white font-bold font-nunito">Zwallet Web</p>
                     <p className="text-md text-white font-semibold font-nunito">ZWallet adalah aplikasi yang bertujuan untuk mempermudah penyimpanan uang secara virtual, dibek...</p>
-                    <button className="flex gap-2 mt-5 shadow-md rounded-xl px-4 py-2 bg-blue-500 items-center button-scale">
+                    <motion.button
+                        whileHover={{ scale: 1.1 }}
+                        className="flex gap-2 mt-5 shadow-md rounded-xl px-4 py-2 bg-blue-500 items-center"
+                    >
                         <img src="/search.svg" width="18px" height="18px" />
                         <p className="text-md text-white font-bold font-nunito">Lihat</p>
-                    </button>
+                    </motion.button>
                 </div>
             </div>
         ))
@@ -32,7 +29,11 @@ const Home = () => {
     return (
         <Fragment>
             <div className="min-h-screen bg-black px-4 py-10">
-                <div className="container mx-auto max-w-4xl pt-44 md:pt-60" data-aos="fade-up" data-aos-duration="800">
+                <motion.div
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                    className="opacity-0 container mx-auto max-w-4xl pt-44 md:pt-60"
+                >
                     <div className="text-center">
                         <div className="text-4xl text-white font-bold font-nunito md:flex justify-center">
                             Hi, Saya&nbsp;
@@ -62,22 +63,48 @@ const Home = () => {
                             </a>
                         </div>
                         <div className="w-56 mx-auto mt-5">
-                            <button className="py-4 container rounded-3xl text-white font-bold font-poppins button button-scale">Download CV</button>
+                            <motion.button
+                                whileHover={{ scale: 1.1 }}
+                                className="py-4 container rounded-3xl text-white font-bold font-poppins button"
+                            >
+                                Download CV
+                            </motion.button>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="container mx-auto pt-60"  data-aos="fade-left" data-aos-duration="800">
+                <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={{
+                        hidden: { x: -500, opacity: 0 },
+                        visible: { x: 0, opacity: 1 }
+                    }}
+                    transition={{ duration: 1 }}
+                    className="container mx-auto pt-60"
+                >
                     <p className="text-2xl font-bold text-white font-nunito uppercase title">Portofolio</p>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10">
                         {renderPortofolios}
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="container mx-auto pt-20"  data-aos="fade-right" data-aos-duration="800">
+                <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={{
+                        hidden: { x: 500, opacity: 0 },
+                        visible: { x: 0, opacity: 1 }
+                    }}
+                    transition={{ duration: 1 }}
+                    className="container mx-auto pt-20"
+                >
                     <p className="text-2xl font-bold text-white font-nunito uppercase title">Gallery</p>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
-                        <div className="bg-gray-800">
+                        <motion.div
+                            whileHover={{ scale: 1.02 }}
+                            className="bg-gray-800"
+                        >
                             <div className="p-4">
                                 <div className="bg-gray-800 bg-opacity-90 w-auto p-1 flex justify-center absolute my-2 mx-2">
                                     <div className="text-center">
@@ -90,8 +117,11 @@ const Home = () => {
                                     <p className="text-md text-gray-300 font-semibold font-nunito">Juara 1 DiLo Hackathon, DiLo Jakarta membuat sebuah acara Hackathon Festival 2019 yang berlokasi di Gedung Kemenpora, kami membuat aplikasi Finansial Teknologi (Fintech) untuk Telkomsel yang diberi nama KakiLima dengan menggunakan layanan API dari BigBox.</p>
                                 </div>
                             </div>
-                        </div>
-                        <div className="bg-gray-800">
+                        </motion.div>
+                        <motion.div
+                            whileHover={{ scale: 1.02 }} 
+                            className="bg-gray-800"
+                        >
                             <div className="p-4">
                                 <div className="bg-gray-800 bg-opacity-90 w-auto p-1 flex justify-center absolute my-2 mx-2">
                                     <div className="text-center">
@@ -104,8 +134,11 @@ const Home = () => {
                                     <p className="text-md text-gray-300 font-semibold font-nunito">Juara 1 BRI Hackathon, BRI Hackathon sebuah lomba membuat inovasi baru untuk Bank BRI, kami membuat aplikasi Finansial Teknologi (Fintech) untuk Bank BRI yang diberi nama BRIma.</p>
                                 </div>
                             </div>
-                        </div>
-                        <div className="bg-gray-800">
+                        </motion.div>
+                        <motion.div
+                            whileHover={{ scale: 1.02 }} 
+                            className="bg-gray-800"
+                        >
                             <div className="p-4">
                                 <div className="bg-gray-800 bg-opacity-90 w-auto p-1 flex justify-center absolute my-2 mx-2">
                                     <div className="text-center">
@@ -118,9 +151,9 @@ const Home = () => {
                                     <p className="text-md text-gray-300 font-semibold font-nunito">Finalis Garuda Innovation Challenge, Garuda Indonesia mengadakan sebuah lomba Hackathon yang dimana Tim Bayang (Tim Saya) dari 400 submission kami berhasil lolos mencapai 15 besar dengan berhadiahkan Jalan-Jalan ke Bali dan menginap disebuah Hotel milik Garuda Indonesia.</p>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
             <div className="bg-gray-800 py-10">
@@ -130,12 +163,18 @@ const Home = () => {
                             <p className="text-2xl text-white font-bold font-poppins lg:text-3xl">Sedang mencari Pekerja atau Freelancer?</p>
                             <p className="text-md text-white font-poppins mt-8">Jika kamu tertarik ingin mempekerjakan atau bekerja sama dengan saya, kamu bisa menghubungi saya dibawah ini.</p>
                             <div className="flex items-center gap-4 mt-5">
-                                <button className="p-4 bg-white rounded-full icon">
+                                <motion.button
+                                    whileHover={{ rotate: 360, scale: 1.1 }}
+                                    className="p-4 bg-white rounded-full"
+                                >
                                     <img src="/call.svg" width="20px" height="20px" />
-                                </button>
-                                <button className="p-4 bg-white rounded-full icon">
+                                </motion.button>
+                                <motion.button
+                                    whileHover={{ rotate: 360, scale: 1.1 }}
+                                    className="p-4 bg-white rounded-full"
+                                >
                                     <img src="/linkedin.svg" width="20px" height="20px" />
-                                </button>
+                                </motion.button>
                             </div>
                             <p className="text-md text-white font-poppins mt-5">Designed by Fansa.</p>
                             <p className="text-md text-white font-poppins">Illustration made by IRA Design.</p>
