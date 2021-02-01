@@ -19,7 +19,7 @@ const Home = () => {
         },
         {
             name: 'KlikCoaching',
-            description: 'Dengan menggunakan aplikasi ini anda dapat mendapatkan informasi agunan baik rumah, tanah dll yang status penjualannya di lelang, baik dari searching location maupun kategori.',
+            description: 'Klikcoaching adalah platform digital pendidikan pertama di Indonesia yang menghubungkan antara pengembang kompetensi dengan peluang pekerjaan yang tersedia di industri.',
             icon: '/klikcoaching-icon.png',
             url: 'https://klikcoaching.com'
         },
