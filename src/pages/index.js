@@ -23,7 +23,7 @@ const Home = () => {
                     <p className="text-lg text-white font-bold font-nunito">Zwallet Web</p>
                     <p className="text-md text-white font-semibold font-nunito">ZWallet adalah aplikasi yang bertujuan untuk mempermudah penyimpanan uang secara virtual, dibek...</p>
                     <button className="flex gap-2 mt-5 shadow-md rounded-xl px-4 py-2 bg-blue-500 items-center button-scale">
-                        <img src="http://apiar.online/icons/search.svg" width="18px" height="18px" />
+                        <img src="/search.svg" width="18px" height="18px" />
                         <p className="text-md text-white font-bold font-nunito">Lihat</p>
                     </button>
                 </div>
@@ -133,10 +133,10 @@ const Home = () => {
                             <p className="text-md text-white font-poppins mt-8">Jika kamu tertarik ingin mempekerjakan atau bekerja sama dengan saya, kamu bisa menghubungi saya dibawah ini.</p>
                             <div className="flex items-center gap-4 mt-5">
                                 <button className="p-4 bg-white rounded-full icon">
-                                    <img src="http://apiar.online/icons/call.svg" width="20px" height="20px" />
+                                    <img src="/call.svg" width="20px" height="20px" />
                                 </button>
                                 <button className="p-4 bg-white rounded-full icon">
-                                    <img src="http://apiar.online/icons/linkedin.svg" width="20px" height="20px" />
+                                    <img src="/linkedin.svg" width="20px" height="20px" />
                                 </button>
                             </div>
                             <p className="text-md text-white font-poppins mt-5">Designed by Fansa.</p>
@@ -144,7 +144,7 @@ const Home = () => {
                             <p className="text-md text-white font-poppins">Special Thanks to: Indosec, Api.</p>
                         </div>
                         <div className="place-self-center hidden lg:block">
-                            <img src="http://apiar.online/icons/contact.svg" width="460px" height="460px" />
+                            <img src="/contact.svg" width="460px" height="460px" />
                         </div>
                     </div>
                 </div>
