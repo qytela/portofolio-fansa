@@ -1,5 +1,3 @@
-import 'aos/dist/aos.css'
-
 import React, { Fragment, memo, useEffect } from 'react'
 import { FaGithub, FaDribbble, FaTwitter, FaRegEnvelope } from 'react-icons/fa'
 import AOS from 'aos'

@@ -1,5 +1,3 @@
-import 'aos/dist/aos.css'
-
 import React, { Fragment, memo, useEffect } from 'react'
 import AOS from 'aos'
 
@@ -18,11 +16,11 @@ const FirstPost = () => {
                 <p className="text-md text-black font-poppins">ZWallet adalah aplikasi yang bertujuan untuk mempermudah penyimpanan uang secara virtual, dibek...</p>
                 <div className="flex gap-3 mt-4">
                     <button className="flex gap-2 shadow-md rounded-xl px-4 py-2 bg-blue-500 items-center button-scale">
-                        <img src="/search.svg" width="18px" height="18px" />
+                        <img src="http://apiar.online/icons/search.svg" width="18px" height="18px" />
                         <p className="text-md text-white font-semibold font-poppins">View</p>
                     </button>
                     <button className="flex gap-2 shadow-md rounded-xl px-4 py-2 bg-gray-100 items-center button-scale">
-                        <img src="/github.svg" width="18px" height="18px" />
+                        <img src="http://apiar.online/icons/github.svg" width="18px" height="18px" />
                         <p className="text-md text-black font-semibold font-poppins">Github</p>
                     </button>
                 </div>
@@ -36,7 +34,7 @@ const FirstPost = () => {
                 <nav className="flex py-4 mt-5" data-aos="fade-left" data-aos-duration="800">
                     <div className="flex items-center gap-4">
                         <div className="p-3 bg-blue-200 rounded-full">
-                            <img src='/fire.svg' />
+                            <img src='http://apiar.online/icons/fire.svg' />
                         </div>
                         <p className="text-base font-poppins">Portofolio</p>
                         <p className="text-base font-poppins">Kontak Saya</p>
@@ -53,10 +51,10 @@ const FirstPost = () => {
                             </div>
                             <div className="container flex items-center gap-4 mt-5">
                                 <button className="p-4 bg-blue-200 rounded-full icon">
-                                    <img src="/call.svg" width="20px" height="20px" />
+                                    <img src="http://apiar.online/icons/call.svg" width="20px" height="20px" />
                                 </button>
                                 <button className="p-4 bg-blue-200 rounded-full icon">
-                                    <img src="/linkedin.svg" width="20px" height="20px" />
+                                    <img src="http://apiar.online/icons/linkedin.svg" width="20px" height="20px" />
                                 </button>
                             </div>
                             <div className="w-56 mt-5">
@@ -64,7 +62,7 @@ const FirstPost = () => {
                             </div>
                         </div>
                         <div className="hidden lg:block">
-                            <img src="/about.svg" />
+                            <img src="http://apiar.online/icons/about.svg" />
                         </div>
                     </div>
                 </div>
@@ -87,10 +85,10 @@ const FirstPost = () => {
                             <p className="text-md text-white font-poppins mt-8">Jika kamu tertarik ingin mempekerjakan atau bekerja sama dengan saya, kamu bisa menghubungi saya dibawah ini.</p>
                             <div className="flex items-center gap-4 mt-5">
                                 <button className="p-4 bg-white rounded-full icon">
-                                    <img src="/call.svg" width="20px" height="20px" />
+                                    <img src="http://apiar.online/icons/call.svg" width="20px" height="20px" />
                                 </button>
                                 <button className="p-4 bg-white rounded-full icon">
-                                    <img src="/linkedin.svg" width="20px" height="20px" />
+                                    <img src="http://apiar.online/icons/linkedin.svg" width="20px" height="20px" />
                                 </button>
                             </div>
                             <p className="text-md text-white font-poppins mt-5">Designed by Fansa.</p>
@@ -98,7 +96,7 @@ const FirstPost = () => {
                             <p className="text-md text-white font-poppins">Special Thanks to: Indosec, Api.</p>
                         </div>
                         <div className="place-self-center hidden lg:block">
-                            <img src="/contact.svg" width="460px" height="460px" />
+                            <img src="http://apiar.online/icons/contact.svg" width="460px" height="460px" />
                         </div>
                     </div>
                 </div>
