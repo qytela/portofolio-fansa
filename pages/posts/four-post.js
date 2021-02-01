@@ -123,7 +123,7 @@ const FourPost = () => {
             </section>
 
             <section className="container mx-auto lg:px-20 p-10">
-                <div className="flex flex-row justify-center hidden lg:flex md:flex">
+                <div className="flex-row justify-center hidden lg:flex md:flex">
                     <h1 className="text-3xl lg:text-4xl md:text-4xl font-bold font-nunito flex">What Users are&nbsp;
                         <p className="text-blue-500">Saying.</p>
                     </h1>
