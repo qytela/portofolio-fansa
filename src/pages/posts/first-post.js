@@ -1,4 +1,3 @@
-import 'tailwindcss/tailwind.css'
 import 'aos/dist/aos.css'
 
 import React, { Fragment, memo, useEffect } from 'react'

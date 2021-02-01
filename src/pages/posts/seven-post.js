@@ -1,13 +1,10 @@
-import 'tailwindcss/tailwind.css'
 import 'aos/dist/aos.css'
 
 import React, { Fragment, memo, useEffect } from 'react'
 import { FaGithub, FaDribbble, FaTwitter, FaRegEnvelope } from 'react-icons/fa'
 import AOS from 'aos'
 
-import styles from '../components/Styles.module.css'
-
-const SevenPost = () => {
+const Home = () => {
     useEffect(() => {
         AOS.init({
             once: true
@@ -25,7 +22,7 @@ const SevenPost = () => {
                 <div className="p-4">
                     <p className="text-lg text-white font-bold font-nunito">Zwallet Web</p>
                     <p className="text-md text-white font-semibold font-nunito">ZWallet adalah aplikasi yang bertujuan untuk mempermudah penyimpanan uang secara virtual, dibek...</p>
-                    <button className={`flex gap-2 mt-5 shadow-md rounded-xl px-4 py-2 bg-blue-500 items-center focus:outline-none ${styles.button_scale}`}>
+                    <button className="flex gap-2 mt-5 shadow-md rounded-xl px-4 py-2 bg-blue-500 items-center button-scale">
                         <img src="http://apiar.online/icons/search.svg" width="18px" height="18px" />
                         <p className="text-md text-white font-bold font-nunito">Lihat</p>
                     </button>
@@ -67,20 +64,20 @@ const SevenPost = () => {
                             </a>
                         </div>
                         <div className="w-56 mx-auto mt-5">
-                            <button className={`py-4 container rounded-3xl text-white font-bold font-poppins ${styles.button} ${styles.button_scale}`}>Download CV</button>
+                            <button className="py-4 container rounded-3xl text-white font-bold font-poppins button button-scale">Download CV</button>
                         </div>
                     </div>
                 </div>
 
                 <div className="container mx-auto pt-60"  data-aos="fade-left" data-aos-duration="800">
-                    <p className={`text-2xl font-bold text-white font-nunito uppercase ${styles.title}`}>Portofolio</p>
+                    <p className="text-2xl font-bold text-white font-nunito uppercase title">Portofolio</p>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10">
                         {renderPortofolios}
                     </div>
                 </div>
 
                 <div className="container mx-auto pt-20"  data-aos="fade-right" data-aos-duration="800">
-                    <p className={`text-2xl font-bold text-white font-nunito uppercase ${styles.title}`}>Gallery</p>
+                    <p className="text-2xl font-bold text-white font-nunito uppercase title">Gallery</p>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
                         <div className="bg-gray-800">
                             <div className="p-4">
@@ -135,10 +132,10 @@ const SevenPost = () => {
                             <p className="text-2xl text-white font-bold font-poppins lg:text-3xl">Sedang mencari Pekerja atau Freelancer?</p>
                             <p className="text-md text-white font-poppins mt-8">Jika kamu tertarik ingin mempekerjakan atau bekerja sama dengan saya, kamu bisa menghubungi saya dibawah ini.</p>
                             <div className="flex items-center gap-4 mt-5">
-                                <button className={`p-4 bg-white rounded-full ${styles.icon}`}>
+                                <button className="p-4 bg-white rounded-full icon">
                                     <img src="http://apiar.online/icons/call.svg" width="20px" height="20px" />
                                 </button>
-                                <button className={`p-4 bg-white rounded-full ${styles.icon}`}>
+                                <button className="p-4 bg-white rounded-full icon">
                                     <img src="http://apiar.online/icons/linkedin.svg" width="20px" height="20px" />
                                 </button>
                             </div>
@@ -152,13 +149,8 @@ const SevenPost = () => {
                     </div>
                 </div>
             </div>
-            <style jsx>{`
-                *:focus {
-                    outline: none;
-                }
-            `}</style>
         </Fragment>
     )
 }
 
-export default memo(SevenPost)
+export default memo(Home)

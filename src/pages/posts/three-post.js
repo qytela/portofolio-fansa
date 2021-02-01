@@ -1,5 +1,3 @@
-import 'tailwindcss/tailwind.css'
-
 import React, { Fragment, memo } from 'react'
 
 const ThreePost = () => {

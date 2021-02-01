@@ -1,5 +1,3 @@
-import 'tailwindcss/tailwind.css'
-
 import React, { Fragment, memo } from 'react'
 
 const FourPost = () => {
@@ -185,9 +183,6 @@ const FourPost = () => {
                 </div>
             </div>
             <style jsx>{`
-                *:focus {
-                    outline: none;
-                }
                 .image-phone {
                     height: 800px;
                     margin-right: 70px;
@@ -205,16 +200,6 @@ const FourPost = () => {
                     background-repeat: no-repeat;
                     right: 0;
                     top: 0;
-                }
-                .buttons-scale:hover {
-                    transition-property: transform;
-                    transition: transform 500ms;
-                    transform: scale(1.1);
-                }
-                .icon:hover {
-                    transition-property: transform;
-                    transition: transform 500ms;
-                    transform: rotate(360deg) scale(1.1);
                 }
             `}</style>
         </Fragment>
