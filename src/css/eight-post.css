@@ -1,0 +1,47 @@
+@media (min-width: 360px) {
+    .banner-bg {
+        background-size: contain;
+    }
+    .margin-banner {
+        margin-top: 130%;
+    }
+}
+@media (min-width: 768px) {
+    .banner-bg {
+        background-size: contain;
+    }
+    .margin-banner {
+        margin-top: 130%;
+    }
+}
+@media (min-width: 1024px) {
+    .margin-banner {
+        margin-top: 0%;
+    }
+    .left-bg-decor {
+        position: absolute;
+    }
+}
+@media (min-width: 1024px) and (min-height: 1366px) {
+    .margin-banner {
+        margin-top: 130%;
+    }
+    .left-bg-decor {
+        position: absolute;
+    }
+}
+.banner-bg {
+    background-image: url("https://templatemo.com/templates/templatemo_540_lava_landing_page/assets/images/banner-bg.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    width: 100%;
+    height: 100vh;
+}
+.left-bg-decor {
+    background-image: url("https://templatemo.com/templates/templatemo_540_lava_landing_page/assets/images/left-bg-decor.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    width: 100%;
+    height: 150%;
+    margin-top: -100px;
+}
