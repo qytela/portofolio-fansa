@@ -1,4 +1,5 @@
 import React, { Fragment, memo, useState } from 'react'
+import Helmet from 'react-helmet'
 import { FaGithub, FaLinkedinIn, FaTelegramPlane, FaRegEnvelope } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 
@@ -63,6 +64,10 @@ const Home = () => {
 
     return (
         <Fragment>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Portofolio - Muhammad Julfansha Hidayah</title>
+            </Helmet>
             <div className="min-h-screen bg-black px-4 py-10">
                 <motion.div
                     animate={{ opacity: 1 }}
