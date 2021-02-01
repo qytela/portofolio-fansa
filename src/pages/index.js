@@ -1,4 +1,4 @@
-import React, { Fragment, memo, useState } from 'react'
+import React, { Fragment, memo } from 'react'
 import Helmet from 'react-helmet'
 import { FaGithub, FaLinkedinIn, FaTelegramPlane, FaRegEnvelope } from 'react-icons/fa'
 import { motion } from 'framer-motion'
@@ -24,7 +24,7 @@ const Home = () => {
             url: 'https://klikcoaching.com'
         },
         {
-            name: 'Komunkasi Langit',
+            name: 'Komunikasi Langit',
             description: 'Media Pembahasan Kita oleh Para Asatdiz Aplikasi Belajar Sunnah Online adalah salah satu fitur e-learning yang disediakan oleh Media Komunikasi Langit yang dapat dipergunakan oleh Para Asatdiz untuk membahas Kitab berseri dalam kurun waktu tertentu (mingguan, bulanan, semesteran, dsb) tergantung dari periode pembahasan Kitab.',
             icon: '/komulang-icon.png',
             url: 'http://komunikasilangit.com'
@@ -34,6 +34,12 @@ const Home = () => {
             description: 'Kumpulmodal adalah aplikasi penggalangan modal usaha bagi pedagang kaki lima, yang menghubungkan Anda sebagai Investor dengan mendanai usaha pedagang kaki lima di Indonesia. Dengan Kumpulmodal, Anda telah membuat dampak sosial dan mendapatkan penghasilan.',
             icon: '/kumpulmodal-icon.png',
             url: 'https://play.google.com/store/apps/details?id=com.kumpulmodal'
+        },
+        {
+            name: 'KakiLima',
+            description: 'Kakilima adalah aplikasi jaringan bisnis pedagang kaki lima modern. Aplikasi kakilima menawarkan sistem yang terintegrasi, dan memungkinkan pedagang kaki Lima (PKL) untuk terhubung dengan stakeholder yang mendukung pengembangan usaha mereka,seperti konsumen, perbankan, dan produsen bahan baku.',
+            icon: '/kakilima-icon.png',
+            url: 'https://play.google.com/store/apps/details?id=com.kakilima.app'
         }
     ]
 
