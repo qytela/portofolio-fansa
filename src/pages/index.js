@@ -81,7 +81,7 @@ const Home = () => {
             <div className="min-h-screen bg-black px-4 py-10">
                 <motion.div
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
+                    transition={{ duration: 1.5 }}
                     className="h-screen flex flex-col justify-center opacity-0 container mx-auto max-w-4xl"
                 >
                     <div className="text-center">
@@ -131,27 +131,14 @@ const Home = () => {
                     </div>
                 </motion.div>
 
-                <motion.div
-                    initial="hidden"
-                    animate="visible"
-                    variants={{
-                        hidden: { x: -500, opacity: 0 },
-                        visible: { x: 0, opacity: 1 }
-                    }}
-                    transition={{ duration: 1 }}
-                    className="container mx-auto"
-                >
+                <div className="container mx-auto">
                     <p className="text-2xl font-bold text-white font-nunito uppercase title">Portofolio</p>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10">
                         {renderPortofolios}
                     </div>
-                </motion.div>
+                </div>
 
-                <motion.div
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
-                    className="opacity-0 container mx-auto pt-20"
-                >
+                <div className="container mx-auto pt-20">
                     <p className="text-2xl font-bold text-white font-nunito uppercase title">Gallery</p>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
                         <motion.div
@@ -206,7 +193,7 @@ const Home = () => {
                             </div>
                         </motion.div>
                     </div>
-                </motion.div>
+                </div>
             </div>
 
             <div className="bg-gray-800 py-10">
