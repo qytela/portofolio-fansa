@@ -25,6 +25,9 @@
 }
 
 @media (max-width: 640px) {
+    .welcome-area {
+        background-size: contain;
+    }
     .welcome-area-header {
         margin-top: 100%;
     }
@@ -34,6 +37,9 @@
 }
 
 @media (min-width: 768px) {
+    .welcome-area {
+        background-size: contain;
+    }
     .welcome-area-header {
         margin-top: 100%;
     }
@@ -44,7 +50,7 @@
 
 @media (min-width: 1024px) {
     .welcome-area-header {
-        margin-top: 80%;
+        margin-top: 100%;
     }
     .left-phone-image {
         margin-left: 0;
