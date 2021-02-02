@@ -75,31 +75,50 @@ const NinePost = () => {
                 </div>
 
                 <div className="px-4 lg:pt-20 xl:pt-0">
+                    <div className="right-bg-decor"></div>
                     <div className="text-4xl font-bold text-center justify-center lg:flex">
                         What They Think&nbsp;
                         <h1 className="text-yellow-500">About Us</h1>
                     </div>
                     <p className="text-lg text-gray-500 mx-auto text-center mt-5 md:w-3/4">Suspendisse vitae laoreet mauris. Fusce a nisi dapibus, euismod purus non, convallis odio. Donec vitae magna ornare, pellentesque ex vitae, aliquet urna.</p>
                     <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 md:px-32 gap-8 mt-10">
-                        <div className="bg-white shadow-3xl">
+                        <div className="bg-white shadow-3xl" style={{ zIndex: 9999 }}>
                             <img src="https://templatemo.com/templates/templatemo_540_lava_landing_page/assets/images/testimonial-author-1.png" className="mx-auto mt-10" />
                             <div className="mt-10 mb-10 text-center">
                                 <h1 className="text-xl font-medium">Jonathan Smart</h1>
                                 <p className="text-md text-gray-500 mt-5 w-3/4 mx-auto">Curabitur pulvinar vel odio sed sagittis. Nam maximus ex diam, nec consectetur diam.</p>
                             </div>
                         </div>
-                        <div className="bg-white shadow-3xl">
+                        <div className="bg-white shadow-3xl" style={{ zIndex: 9999 }}>
                             <img src="https://templatemo.com/templates/templatemo_540_lava_landing_page/assets/images/testimonial-author-1.png" className="mx-auto mt-10" />
                             <div className="mt-10 mb-10 text-center">
                                 <h1 className="text-xl font-medium">Jonathan Smart</h1>
                                 <p className="text-md text-gray-500 mt-5 w-3/4 mx-auto">Curabitur pulvinar vel odio sed sagittis. Nam maximus ex diam, nec consectetur diam.</p>
                             </div>
                         </div>
-                        <div className="bg-white shadow-3xl">
+                        <div className="bg-white shadow-3xl" style={{ zIndex: 9999 }}>
                             <img src="https://templatemo.com/templates/templatemo_540_lava_landing_page/assets/images/testimonial-author-1.png" className="mx-auto mt-10" />
                             <div className="mt-10 mb-10 text-center">
                                 <h1 className="text-xl font-medium">Jonathan Smart</h1>
                                 <p className="text-md text-gray-500 mt-5 w-3/4 mx-auto">Curabitur pulvinar vel odio sed sagittis. Nam maximus ex diam, nec consectetur diam.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="xl:mt-60">
+                    <div className="footer-bg">
+                        <div className="container mx-auto max-w-2xl footer-container">
+                            <div className="flex justify-center">
+                                <div className="text-center">
+                                    <div className="text-4xl text-white font-bold justify-center flex">
+                                        More About&nbsp;
+                                        <div className="text-yellow-400">Lava</div>
+                                    </div>
+                                    <p className="text-md text-white mt-5">Phasellus dapibus urna vel lacus accumsan, iaculis eleifend leo auctor. Duis at finibus odio. Vivamus ut pharetra arcu, in porta metus. Suspendisse blandit pulvinar ligula ut elementum.</p>
+                                    <p className="text-md text-white mt-5">If you need this contact form to send email to your inbox, you may follow our contact page for more detail.</p>
+                                    <p className="text-md text-white mt-32 md:mt-52">Copyright © 2020 Lava Landing Page | Designed by TemplateMo</p>
+                                </div>
                             </div>
                         </div>
                     </div>
