@@ -24,7 +24,7 @@ const TenPost = () => {
     return (
         <Fragment>
             <div className="h-screen font-poppins">
-                <div className="flex justify-between items-center container mx-auto px-4 py-10">
+                <div className="flex justify-between items-center container mx-auto px-4 xl:px-20 py-10">
                     <div className="flex">
                         <img src="/plane.png" className="w-10 h-7 mr-3" />
                         <p className="text-2xl font-medium font-poppins text-gray-600">Ankasa</p>
