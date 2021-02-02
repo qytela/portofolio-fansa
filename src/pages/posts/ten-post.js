@@ -31,7 +31,7 @@ const TenPost = () => {
                     </div>
                     <button className="px-8 py-3 rounded-xl text-white font-bold shadow-xl items-center justify-center focus:outline-none button">Sign Up</button>
                 </div>
-                <div className="container mx-auto px-4 xl:px-0 header-text">
+                <div className="container mx-auto px-4 xl:px-20 header-text">
                     <div className="text-4xl xl:text-5xl font-medium flex">
                         Find Your&nbsp;
                         <h1 className="text-blue-500">Flight</h1>
@@ -57,7 +57,7 @@ const TenPost = () => {
                     transition={{ duration: 1 }}
                     className="bg-left"></motion.div>
 
-                <div className="container mx-auto px-4 xl:px-0 content">
+                <div className="container mx-auto px-4 xl:px-20 content">
                     <div className="flex justify-between">
                         <div>
                             <h5 className="text-md xl:text-lg text-blue-500 font-medium uppercase">Trending</h5>
@@ -198,7 +198,7 @@ const TenPost = () => {
                     </div>
                 </div>
 
-                <div className="pt-20 xl:pt-40 px-4 xl:px-0 container mx-auto">
+                <div className="pt-20 xl:pt-40 px-4 xl:px-20 container mx-auto">
                     <div className="grid grid-cols-1 xl:grid-cols-4">
                         <div className="text-left">
                             <div className="flex">
@@ -263,7 +263,7 @@ const TenPost = () => {
                     </div>
                 </div>
 
-                <div className="pt-20 px-4 xl:px-0 pb-5 container mx-auto text-md text-gray-500">
+                <div className="pt-20 px-4 xl:px-20 pb-5 container mx-auto text-md text-gray-500">
                     <h4>© Ankasa.  All Rights Reserved.</h4>
                     {/* <h4>© Ankasa.  All Rights Reserved.</h4> */}
                 </div>
