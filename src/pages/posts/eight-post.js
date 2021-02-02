@@ -1,6 +1,6 @@
 import React, { Fragment, memo, useState } from 'react'
 import { FaArrowRight, FaList, FaArrowCircleLeft, FaArrowCircleRight, FaGithub, FaLinkedinIn, FaTelegramPlane, FaRegEnvelope } from 'react-icons/fa'
-import { motion } from 'framer-motion'
+import { useAnimation, motion } from 'framer-motion'
 
 const EightPost = () => {
     const [indexTopDestination, setIndexTopDestination] = useState(0)
@@ -12,10 +12,14 @@ const EightPost = () => {
         <img src="/tenpost/top-destination-three.png" />
     ]
 
+    const controlsSignIn = useAnimation()
+    const controlsSignUp = useAnimation()
+
     const variantsNavbar = {
         open: {
             height: 'auto',
-            boxShadow: '0px 20px 30px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
+            boxShadow: '0 4px 2px -2px gray',
+            boxShadow: '0 4px 2px -2px rgba(0, 0, 0, 0.1)'
         },
         close: { height: 0 }
     }
@@ -41,7 +45,24 @@ const EightPost = () => {
                     </div>
                     <button className="px-8 py-3 rounded-xl text-white font-bold shadow-xl items-center justify-center focus:outline-none button not-mobile">Sign Up</button>
                     <div className="text-3xl text-gray-500 xl:hidden">
-                        <FaList onClick={() => setNavbar(!showNavbar)} />
+                        <FaList onClick={() => {
+                            if (showNavbar) {
+                                controlsSignIn.start({
+                                    x: -1000
+                                })
+                                controlsSignUp.start({
+                                    x: 1000
+                                })
+                            } else {
+                                controlsSignIn.start({
+                                    x: 0
+                                })
+                                controlsSignUp.start({
+                                    x: 0
+                                })
+                            }
+                            setNavbar(!showNavbar)
+                        }} />
                     </div>
                 </div>
                 <motion.div
@@ -50,8 +71,21 @@ const EightPost = () => {
                     transition={{ duration: 0.3 }}
                     className="p-4 px-8 xl:hidden overflow-hidden"
                 >
-                    <div className="mt-10">
-                        <button className="px-8 py-3 rounded-xl text-white font-bold shadow-xl items-center justify-center focus:outline-none button">Sign Up</button>
+                    <div className="mt-10 mb-2 flex justify-between">
+                        <motion.button
+                            animate={controlsSignIn}
+                            transition={{ duration: 0.5 }}
+                            className="w-36 px-8 py-3 rounded-xl text-white font-bold shadow-xl items-center justify-center focus:outline-none button" style={{ x: -1000 }}
+                        >
+                            Sign In
+                        </motion.button>
+                        <motion.button
+                            animate={controlsSignUp}
+                            transition={{ duration: 0.5 }}
+                            className="w-36 px-8 py-3 rounded-xl text-white font-bold shadow-xl items-center justify-center focus:outline-none button" style={{ x: 1000 }}
+                        >
+                            Sign Up
+                        </motion.button>
                     </div>
                 </motion.div>
                 <div className="mt-28 xl:mt-20 px-8 xl:px-44">
