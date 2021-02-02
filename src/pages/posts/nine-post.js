@@ -47,7 +47,7 @@ const NinePost = () => {
                 <div className="mb-40 xl:mb-0 xl:h-screen">
                     <div className="left-bg-decor"></div>
                     <div className="flex flex-col lg:flex-row px-4 left-phone-image">
-                        <img src="https://templatemo.com/templates/templatemo_540_lava_landing_page/assets/images/left-image.png" className="md:w-3/4 md:h-3/4 xl:w-auto xl:h-auto" />
+                        <img src="https://templatemo.com/templates/templatemo_540_lava_landing_page/assets/images/left-image.png" className="md:w-3/4 md:h-3/4 xl:w-auto xl:h-auto" style={{ zIndex: 9999 }} />
                         <div className="grid grid-cols-1 gap-y-20 mt-24 lg:mt-0 md:ml-10 xl:ml-32">
                             <div className="flex md:max-w-full lg:max-w-xl">
                                 <img src="https://templatemo.com/templates/templatemo_540_lava_landing_page/assets/images/about-icon-01.png" className="h-24" />
@@ -79,7 +79,7 @@ const NinePost = () => {
                         What They Think&nbsp;
                         <h1 className="text-yellow-500">About Us</h1>
                     </div>
-                    <p className="text-lg text-gray-500 mx-auto text-center mt-5 w-3/4">Suspendisse vitae laoreet mauris. Fusce a nisi dapibus, euismod purus non, convallis odio. Donec vitae magna ornare, pellentesque ex vitae, aliquet urna.</p>
+                    <p className="text-lg text-gray-500 mx-auto text-center mt-5">Suspendisse vitae laoreet mauris. Fusce a nisi dapibus, euismod purus non, convallis odio. Donec vitae magna ornare, pellentesque ex vitae, aliquet urna.</p>
                     <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 md:px-32 gap-8 mt-10">
                         <div className="bg-white shadow-3xl">
                             <img src="https://templatemo.com/templates/templatemo_540_lava_landing_page/assets/images/testimonial-author-1.png" className="mx-auto mt-10" />
