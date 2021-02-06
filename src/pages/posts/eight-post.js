@@ -5,19 +5,30 @@ import { useAnimation, motion } from 'framer-motion'
 const EightPost = () => {
     const [indexTopDestination, setIndexTopDestination] = useState(0)
     const [showNavbar, setNavbar] = useState(false)
+    const [innerWidth, setInnerWidth] = useState()
 
     useEffect(() => {
+        setInnerWidth(window.innerWidth)
         window.addEventListener('resize', () => {
+            setInnerWidth(window.innerWidth)
             if (window.innerWidth >= 1024) {
                 setNavbar(false)
             }
         })
-    }, [])
+    })
 
     const topDestinations = [
         <img src="/tenpost/top-destination-one.png" />,
         <img src="/tenpost/top-destination-two.png" />,
         <img src="/tenpost/top-destination-three.png" />
+    ]
+
+    const topDestinationsTwo = [
+        <img src="/tenpost/top-destination-one.png" className="not-mobile" />,
+        <img src="/tenpost/top-destination-one.png" className="not-mobile" />,
+        <img src="/tenpost/top-destination-one.png" className="not-mobile" />,
+        <img src="/tenpost/top-destination-one.png" className="not-mobile" />,
+        <img src="/tenpost/top-destination-one.png" className="not-mobile" />
     ]
 
     const controlsSignIn = useAnimation()
@@ -42,6 +53,33 @@ const EightPost = () => {
         }
     }
 
+    const togglerNavbar = () => {
+        if (showNavbar) {
+            controlsSignIn.start({
+                x: -1000
+            })
+            controlsSignUp.start({
+                x: 1000
+            })
+        } else {
+            controlsSignIn.start({
+                x: 0
+            })
+            controlsSignUp.start({
+                x: 0
+            })
+        }
+        setNavbar(!showNavbar)
+    }
+
+    const renderTopDestination = (
+        topDestinationsTwo.slice(0, (innerWidth == 768) ? 3 : topDestinationsTwo.length).map((item, index) => (
+            <Fragment key={index}>
+                {item}
+            </Fragment>
+        ))
+    )
+
     return (
         <Fragment>
             <div className="h-screen py-10 font-poppins">
@@ -53,24 +91,7 @@ const EightPost = () => {
                     </div>
                     <button className="px-8 py-3 rounded-xl text-white font-bold shadow-xl items-center justify-center focus:outline-none button hidden xl:flex">Sign Up</button>
                     <div className="text-3xl text-gray-500 xl:hidden">
-                        <FaList onClick={() => {
-                            if (showNavbar) {
-                                controlsSignIn.start({
-                                    x: -1000
-                                })
-                                controlsSignUp.start({
-                                    x: 1000
-                                })
-                            } else {
-                                controlsSignIn.start({
-                                    x: 0
-                                })
-                                controlsSignUp.start({
-                                    x: 0
-                                })
-                            }
-                            setNavbar(!showNavbar)
-                        }} />
+                        <FaList onClick={() => togglerNavbar()}/>
                     </div>
                 </div>
                 <motion.div
@@ -130,9 +151,9 @@ const EightPost = () => {
                                 <h4 className="text-lg text-white font-medium">Tokyo,</h4>
                                 <h4 className="text-2xl text-white font-medium">Japan</h4>
                             </div>
-                            <div className="px-2 py-2 rounded-full text-white background destination-arrow-right">
+                            <a href="#" className="px-2 py-2 rounded-full text-white background destination-arrow-right">
                                 <FaArrowRight />
-                            </div>
+                            </a>
                         </div>
                         <div className="relative">
                             <img src="/tenpost/destination-one.png" />
@@ -146,9 +167,9 @@ const EightPost = () => {
                                 <h4 className="text-lg text-white font-medium">Tokyo,</h4>
                                 <h4 className="text-2xl text-white font-medium">Japan</h4>
                             </div>
-                            <div className="px-2 py-2 rounded-full text-white background destination-arrow-right">
+                            <a href="#" className="px-2 py-2 rounded-full text-white background destination-arrow-right">
                                 <FaArrowRight />
-                            </div>
+                            </a>
                         </div>
                         <div className="relative">
                             <img src="/tenpost/destination-one.png" />
@@ -162,9 +183,9 @@ const EightPost = () => {
                                 <h4 className="text-lg text-white font-medium">Tokyo,</h4>
                                 <h4 className="text-2xl text-white font-medium">Japan</h4>
                             </div>
-                            <div className="px-2 py-2 rounded-full text-white background destination-arrow-right">
+                            <a href="#" className="px-2 py-2 rounded-full text-white background destination-arrow-right">
                                 <FaArrowRight />
-                            </div>
+                            </a>
                         </div>
                         <div className="relative">
                             <img src="/tenpost/destination-one.png" />
@@ -178,9 +199,9 @@ const EightPost = () => {
                                 <h4 className="text-lg text-white font-medium">Tokyo,</h4>
                                 <h4 className="text-2xl text-white font-medium">Japan</h4>
                             </div>
-                            <div className="px-2 py-2 rounded-full text-white background destination-arrow-right">
+                            <a href="#" className="px-2 py-2 rounded-full text-white background destination-arrow-right">
                                 <FaArrowRight />
-                            </div>
+                            </a>
                         </div>
                         <div className="relative">
                             <img src="/tenpost/destination-one.png" />
@@ -194,23 +215,22 @@ const EightPost = () => {
                                 <h4 className="text-lg text-white font-medium">Tokyo,</h4>
                                 <h4 className="text-2xl text-white font-medium">Japan</h4>
                             </div>
-                            <div className="px-2 py-2 rounded-full text-white background destination-arrow-right">
+                            <a href="#" className="px-2 py-2 rounded-full text-white background destination-arrow-right">
                                 <FaArrowRight />
-                            </div>
+                            </a>
                         </div>
                     </div>
 
                     <div className="mt-44">
                         <div className="relative">
-                            <img src="/tenpost/destination-bg.png" className="destination-bg" />
-                            <img src="/tenpost/destination-bg-mobile.png" className="mx-auto destination-bg-mobile" />
+                            <img className="destination-bg" />
                             <div className="text-center top-destination">
                                 <h1 className="text-md md:text-3xl text-white">Top 10 destinations</h1>
                             </div>
                             <button className="text-3xl text-white focus:outline-none mobile-arrow-left" onClick={() => nextOrPreviousTopDestination(indexTopDestination - 1)}>
                                 <FaArrowCircleLeft />
                             </button>
-                            <div className="lg:hidden mobile-content-center mobile">
+                            <div className="md:hidden mobile-content-center">
                                 <motion.div
                                     key={indexTopDestination}
                                     initial={{ opacity: 0 }}
@@ -222,11 +242,7 @@ const EightPost = () => {
                                 </motion.div>
                             </div>
                             <div className="flex gap-5 mobile-content-center">
-                                <img src="/tenpost/top-destination-one.png" className="not-mobile" />
-                                <img src="/tenpost/top-destination-one.png" className="not-mobile" />
-                                <img src="/tenpost/top-destination-one.png" className="not-mobile" />
-                                <img src="/tenpost/top-destination-one.png" className="not-mobile" />
-                                <img src="/tenpost/top-destination-one.png" className="not-mobile" />
+                                {renderTopDestination}
                             </div>
                             <button className="text-3xl text-white focus:outline-none mobile-arrow-right" onClick={() => nextOrPreviousTopDestination(indexTopDestination + 1)}>
                                 <FaArrowCircleRight />

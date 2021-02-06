@@ -33,12 +33,7 @@
 }
 
 .destination-bg {
-    visibility: visible;
-}
-
-.destination-bg-mobile {
-    visibility: hidden;
-    position: absolute;
+    content: url('../../public/tenpost/destination-bg.png');
 }
 
 .top-destination {
@@ -69,6 +64,11 @@
     transform: translateX(-10%);
 }
 
+.not-mobile {
+    visibility: visible;
+    position: relative;
+}
+
 @media (max-width: 640px) {
     .welcome-area-bg-right {
         height: 100%;
@@ -87,13 +87,7 @@
     }
 
     .destination-bg {
-        visibility: hidden;
-        position: absolute;
-    }
-
-    .destination-bg-mobile {
-        visibility: visible;
-        position: relative;
+        content: url('../../public/tenpost/destination-bg-mobile.png');
     }
 
     .mobile-arrow-left {
@@ -144,14 +138,9 @@
 
     .mobile-content-center {
         position: absolute;
-        top: 25%;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .not-mobile {
-        visibility: hidden;
-        position: absolute;
+        top: 27%;
+        left: 38%;
+        transform: translateX(-38%);
     }
 }
 
@@ -180,11 +169,6 @@
         left: 25%;
         transform: translateX(-25%);
     }
-
-    .not-mobile {
-        visibility: visible;
-        position: relative;
-    }
 }
 
 @media (min-width: 1280px) {
@@ -209,12 +193,7 @@
     .mobile-content-center {
         position: absolute;
         top: 30%;
-        left: 33%;
-        transform: translateX(-33%);
-    }
-
-    .not-mobile {
-        visibility: visible;
-        position: relative;
+        left: 34%;
+        transform: translateX(-34%);
     }
 }
