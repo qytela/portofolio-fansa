@@ -1,19 +1,13 @@
 .welcome-area-bg-right {
     width: 100%;
-    height: 100%;
-    background-image: url("../../public/tenpost/bg-right.png");
     background-repeat: no-repeat;
     background-position: right top;
-    margin-top: -7%;
 }
 
 .welcome-area-bg-left {
     width: 100%;
-    height: 100%;
-    background-image: url("../../public/tenpost/bg-left.png");
     background-repeat: no-repeat;
     background-position: left top;
-    margin-top: -44%;
 }
 
 .destination-airlines {
@@ -64,8 +58,8 @@
 .mobile-content-center {
     position: absolute;
     top: 30%;
-    left: 35%;
-    transform: translateX(-35%);
+    left: 33%;
+    transform: translateX(-33%);
 }
 
 .mobile-arrow-right {
@@ -77,13 +71,15 @@
 
 @media (max-width: 640px) {
     .welcome-area-bg-right {
+        height: 100%;
         background-image: url("../../public/tenpost/bg-right-mobile.png");
-        margin-top: -21%;
+        margin-top: -18%;
     }
 
     .welcome-area-bg-left {
+        height: 100%;
         background-image: url("../../public/tenpost/bg-left-mobile.png");
-        margin-top: -154%;
+        margin-top: -157%;
     }
 
     .content {
@@ -124,5 +120,101 @@
     .not-mobile {
         visibility: hidden;
         position: absolute;
+    }
+}
+
+@media (min-width: 768px) {
+    .welcome-area-bg-right {
+        height: 35%;
+        background-image: url("../../public/tenpost/bg-right-mobile.png");
+        margin-top: -12%;
+    }
+
+    .welcome-area-bg-left {
+        height: 35%;
+        background-image: url("../../public/tenpost/bg-left-mobile.png");
+        margin-top: -30%;
+    }
+
+    .destination-arrow-right {
+        position: absolute;
+        bottom: 5%;
+        right: 12%;
+    }
+
+    .mobile-content-center {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .not-mobile {
+        visibility: hidden;
+        position: absolute;
+    }
+}
+
+@media (min-width: 1024px) {
+    .welcome-area-bg-right {
+        height: 50%;
+        background-image: url("../../public/tenpost/bg-right.png");
+        margin-top: -9%;
+    }
+
+    .welcome-area-bg-left {
+        height: 50%;
+        background-image: url("../../public/tenpost/bg-left.png");
+        margin-top: -54%;
+    }
+
+    .destination-arrow-right {
+        position: absolute;
+        bottom: 5%;
+        right: 12%;
+    }
+
+    .mobile-content-center {
+        position: absolute;
+        top: 30%;
+        left: 25%;
+        transform: translateX(-25%);
+    }
+
+    .not-mobile {
+        visibility: visible;
+        position: relative;
+    }
+}
+
+@media (min-width: 1280px) {
+    .welcome-area-bg-right {
+        height: 100%;
+        background-image: url("../../public/tenpost/bg-right.png");
+        margin-top: -6%;
+    }
+
+    .welcome-area-bg-left {
+        height: 100%;
+        background-image: url("../../public/tenpost/bg-left.png");
+        margin-top: -45%;
+    }
+
+    .destination-arrow-right {
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+    }
+
+    .mobile-content-center {
+        position: absolute;
+        top: 30%;
+        left: 33%;
+        transform: translateX(-33%);
+    }
+
+    .not-mobile {
+        visibility: visible;
+        position: relative;
     }
 }

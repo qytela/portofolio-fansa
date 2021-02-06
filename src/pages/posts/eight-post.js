@@ -1,10 +1,18 @@
-import React, { Fragment, memo, useState } from 'react'
+import React, { Fragment, memo, useState, useEffect } from 'react'
 import { FaArrowRight, FaList, FaArrowCircleLeft, FaArrowCircleRight, FaGithub, FaLinkedinIn, FaTelegramPlane, FaRegEnvelope } from 'react-icons/fa'
 import { useAnimation, motion } from 'framer-motion'
 
 const EightPost = () => {
     const [indexTopDestination, setIndexTopDestination] = useState(0)
     const [showNavbar, setNavbar] = useState(false)
+
+    useEffect(() => {
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024) {
+                setNavbar(false)
+            }
+        })
+    }, [])
 
     const topDestinations = [
         <img src="/tenpost/top-destination-one.png" />,
@@ -43,7 +51,7 @@ const EightPost = () => {
                         <img src="/plane.png" className="w-10 h-7 mr-3" />
                         <h3 className="text-2xl font-medium text-gray-600">Ankasa</h3>
                     </div>
-                    <button className="px-8 py-3 rounded-xl text-white font-bold shadow-xl items-center justify-center focus:outline-none button not-mobile">Sign Up</button>
+                    <button className="px-8 py-3 rounded-xl text-white font-bold shadow-xl items-center justify-center focus:outline-none button hidden xl:flex">Sign Up</button>
                     <div className="text-3xl text-gray-500 xl:hidden">
                         <FaList onClick={() => {
                             if (showNavbar) {
@@ -89,13 +97,12 @@ const EightPost = () => {
                     </div>
                 </motion.div>
                 <div className="mt-28 xl:mt-20 px-8 xl:px-44">
-                    <div className="text-3xl xl:text-5xl font-medium flex">
+                    <div className="text-3xl md:text-5xl font-medium flex">
                         Find Your&nbsp;
                         <h1 className="text-blue-500">Flight</h1>
                     </div>
-                    <h5 className="text-md xl:text-xl text-gray-500 mt-2">and explore the world with us</h5>
+                    <h5 className="text-md md:text-xl text-gray-500 mt-2">and explore the world with us</h5>
                 </div>
-
 
                 <div className="welcome-area-bg-right" />
                 <div className="welcome-area-bg-left" />
@@ -104,13 +111,13 @@ const EightPost = () => {
 
                     <div className="flex justify-between">
                         <div>
-                            <h5 className="text-lg xl:text-xl text-blue-500 font-medium">TRENDING</h5>
-                            <h1 className="text-xl xl:text-3xl font-medium">Trending destinations</h1>
+                            <h5 className="text-lg md:text-xl text-blue-500 font-medium">TRENDING</h5>
+                            <h1 className="text-xl md:text-3xl font-medium">Trending destinations</h1>
                         </div>
-                        <a href="#" className="text-lg xl:text-xl text-blue-500 font-medium">View All</a>
+                        <a href="#" className="text-lg md:text-xl text-blue-500 font-medium">View All</a>
                     </div>
 
-                    <div className="grid grid-cols-2 xl:grid-cols-5 gap-5 mt-5">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 mt-5">
                         <div className="relative">
                             <img src="/tenpost/destination-one.png" />
                             <div className="w-32 flex justify-center px-2 py-1 rounded-full text-white background destination-airlines">
@@ -198,12 +205,12 @@ const EightPost = () => {
                             <img src="/tenpost/destination-bg.png" className="destination-bg" />
                             <img src="/tenpost/destination-bg-mobile.png" className="mx-auto destination-bg-mobile" />
                             <div className="text-center top-destination">
-                                <h1 className="text-md xl:text-3xl text-white">Top 10 destinations</h1>
+                                <h1 className="text-md md:text-3xl text-white">Top 10 destinations</h1>
                             </div>
                             <button className="text-3xl text-white focus:outline-none mobile-arrow-left" onClick={() => nextOrPreviousTopDestination(indexTopDestination - 1)}>
                                 <FaArrowCircleLeft />
                             </button>
-                            <div className="xl:hidden mobile-content-center mobile">
+                            <div className="lg:hidden mobile-content-center mobile">
                                 <motion.div
                                     key={indexTopDestination}
                                     initial={{ opacity: 0 }}
@@ -227,15 +234,15 @@ const EightPost = () => {
                         </div>
                     </div>
 
-                    <footer className="mt-44 grid grid-cols-1 xl:grid-cols-4">
+                    <footer className="mt-44 grid grid-cols-1 lg:grid-cols-4">
                         <div className="text-left">
                             <div className="flex">
                                 <img src="/plane.png" className="w-10 h-7 mr-3" />
                                 <p className="text-xl font-medium">Ankasa</p>
                             </div>
-                            <h4 className="text-md text-gray-500 mt-5">Find your Flight and explore the world with us. We will take care of the rest</h4>
+                            <h4 className="text-md text-gray-500 mt-5 lg:w-3/4 xl:w-full">Find your Flight and explore the world with us. We will take care of the rest</h4>
                         </div>
-                        <div className="xl:flex xl:justify-center mt-10 xl:mt-0">
+                        <div className="xl:flex xl:justify-center mt-10 lg:mt-0">
                             <div className="xl:text-center">
                                 <h4 className="text-xl font-medium">Features</h4>
                                 <div className="text-left">
@@ -246,14 +253,14 @@ const EightPost = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="xl:flex xl:justify-center mt-10 xl:mt-0">
+                        <div className="xl:flex xl:justify-center mt-10 lg:mt-0">
                             <div className="xl:text-center">
                                 <h4 className="text-xl font-medium">Download Angkasa app</h4>
                                 <a href="#"><img src="/tenpost/appstore.png" className="xl:mx-auto mt-5" /></a>
                                 <a href="#"><img src="/tenpost/playstore.png" className="xl:mx-auto mt-5" /></a>
                             </div>
                         </div>
-                        <div className="xl:flex xl:justify-center mt-10 xl:mt-0">
+                        <div className="xl:flex xl:justify-center mt-10 lg:mt-0">
                             <div className="text-left xl:text-center">
                                 <h4 className="text-xl font-medium">Follow Us</h4>
                                 <div className="flex xl:justify-center mt-5">
