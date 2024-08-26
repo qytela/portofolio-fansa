@@ -131,7 +131,7 @@ const Home = () => {
                     </div>
                 </motion.div>
 
-                <div className="container mx-auto">
+                {/* <div className="container mx-auto">
                     <p className="text-2xl font-bold text-white font-nunito uppercase title">Portofolio</p>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10">
                         {renderPortofolios}
@@ -193,7 +193,7 @@ const Home = () => {
                             </div>
                         </motion.div>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             <div className="bg-gray-800 py-10">
